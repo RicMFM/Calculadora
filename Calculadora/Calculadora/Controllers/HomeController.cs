@@ -43,6 +43,17 @@ namespace Calculadora.Controllers
                     else { visor = botao; }
                     
                     break;
+                case ",":
+                    //transforma o num inteiro em real
+                    if (!visor.Contains(",")) visor += ",";
+                    break;
+                case "+/-":
+                    //inverte o valor do visor
+                    if (visor.StartsWith("-")) visor = visor.Substring(1);
+                    else visor = "-" + visor;
+                    //poderíamos exeutar esta mesma operação de forma algébrica
+                    break;
+            
             }
 
             //preparar dados a serem enviados para a View
